@@ -1,0 +1,23 @@
+@use '../colors' as g;
+
+
+html, body {
+    height:100vh;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+    @include g.gradient(left, g.$list);
+}
+.wrapper{
+    margin: 0 auto;
+    font-family: 'Fredericka the Great'
+    
+}
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

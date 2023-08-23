@@ -1,0 +1,86 @@
+@use '../colors' as c;
+.searchField {
+    min-width: 20rem;
+    min-height: 25rem;
+    box-shadow: 0 0 1rem 0 rgba(246, 245, 245, 0.5);
+    z-index: 1;
+    position: absolute;
+    background: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+.searchField:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgb(255, 255, 255, .7);
+    filter: blur(10px);
+    background: inherit;
+    z-index: -1;
+    border-radius: 5%;
+
+}
+.instruction {
+    padding: 0rem 1rem 0rem 1rem;
+    margin-top: -1rem;
+    text-align: center;
+    color: white;
+}
+.search {
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    margin-left: 9rem;
+    height: 1.57rem;
+}
+.search:hover{
+    background-color: c.$nextBlue;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.input{
+    min-height: 1.5rem;
+    @include c.gradient(left, c.$list2);
+    color: white;
+    width: 100%;
+}
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: -3rem;
+}
+
+.cities {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 70px;
+    margin-top: 1.6rem;
+}
+.conta {
+    background-color: c.$nextBlue;
+    width: 100px;
+    height: 25px;
+}
+.conta:first-child{
+    margin-top: -0.5rem;
+}
+.currentCity {
+    background-color: c.$nextBlue;
+    cursor: pointer;
+    width: 100%;
+}
+.currentCity:hover, .citiesOpt:hover {
+    background-color: c.$lastBlue;
+    color: white;
+    border-radius: 15px;
+}

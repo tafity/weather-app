@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&family=Nunito+Sans:opsz,wght@6..12,200&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,900&display=swap');
+$mainFont: 'Marmelad', sans-serif;
+$forecastFont:'Rubik Moonrocks', 'Times New Roman', Times, serif;
+$weatherFont: 'Nunito Sans', sans-serif;
+
+* {
+    font-family: $weatherFont;
+}
+.forecast, .title {
+    text-transform: uppercase;
+}
+
+.forecast {
+    font-family: $forecastFont;
+}
+.instruction {
+    font-size: 13px;   
+}

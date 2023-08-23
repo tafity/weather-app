@@ -1,0 +1,14 @@
+$startBlue: hsl(222, 23%, 59%);
+$nextBlue: hsl(221, 44%, 36%);
+$lastBlue: hsl(220, 92%, 10%);
+
+// GRADIENT LIST
+$list: $startBlue, $nextBlue, $lastBlue;
+$list2: $lastBlue, $nextBlue;
+
+@mixin gradient($direction, $list) {
+    background: -moz-radial-gradient($direction, $list);
+    background: -webkit-linear-gradient($direction, $list);
+    background-color: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);
+}

@@ -1,0 +1,94 @@
+@use '../fonts' as f;
+
+.forecastField {
+    width: 30rem;
+    height: 96%;
+    box-shadow: 0 0 1rem 0 rgba(246, 245, 245, 0.5);
+    z-index: 1;
+    position: absolute;
+    background: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+}
+.forecastField:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgb(255, 255, 255, .7);
+    filter: blur(10px);
+    background: inherit;
+    z-index: -1;
+    border-radius: 5%;
+
+}
+.title{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    white-space: nowrap;
+}
+.cityName {
+    font-family: f.$weatherFont;
+}
+.countryName {
+    font-family: f.$weatherFont;
+    font-weight: 200;
+}
+.mainDegree {
+    font-family: f.$weatherFont;
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: -1rem;
+    margin-left: 0.7rem;
+}
+.describe {
+    margin-top: -0.2rem;
+    font-size: 12px;
+}
+.temps {
+    font-family: f.$weatherFont;
+    font-weight: 200;
+    font-size: 12px;
+    margin-top: -0.7rem;
+}
+.hourlyWeather {
+    display: flex;
+    overflow-x: scroll;
+    max-width: 21rem;
+    margin-top: -1rem;
+    padding-bottom: 2px;
+}
+.widget {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 3rem;
+    flex-shrink: 0;
+    color: white;
+}
+.hour {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: underline;
+    font-size: 1rem;
+    margin-left: -10rem;
+}
+.day {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: underline;
+    font-size: 1rem;
+    margin-left: -10rem;
+}
